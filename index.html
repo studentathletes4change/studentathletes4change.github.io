@@ -6,9 +6,6 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<head>
-    <script src="jquery-3.5.1.min.js"></script>
-</head>
 <style>
 body {font-family: "Lato", sans-serif}
 * {
@@ -68,7 +65,7 @@ body {font-family: "Lato", sans-serif}
   width: 100%;
   height: auto;
 }
-
+/* Maybe for overlay on mobile, make it the size of the screen, something they can exit out of after reading */
 .overlay {
   position: absolute;
   top: 0;
@@ -141,7 +138,7 @@ body {font-family: "Lato", sans-serif}
   <a href="#athletes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ATHLETES</a>
   <a href="#videos" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEOS</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+  <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
 </div>
 
 <!-- Page content -->
@@ -272,12 +269,6 @@ function myFunction() {
   }
 }
 
-$(document).ready(function() {
-    $('.hover').on('touchstart touchend', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('hover_effect');
-    });
-});
 
 // I think we need server side support to achieve this, so maybe I need to just take this functionality away
 // function sendMail() {

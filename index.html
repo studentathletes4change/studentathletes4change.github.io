@@ -17,7 +17,7 @@ body {font-family: "Lato", sans-serif}
   float: left;
   width: 50%;
   padding: 10px;
-  height: 80vh;
+  height: 50%;
   text-align: center;
 }
 
@@ -32,6 +32,7 @@ body {font-family: "Lato", sans-serif}
 .column-pictures {
   float: left;
   width: 33.33%;
+  height: 100%;
   padding: 5px 30px;
 }
 
@@ -41,6 +42,11 @@ body {font-family: "Lato", sans-serif}
   clear: both;
   display: table;
   flex-direction: column;
+}
+
+.video {
+    max-width: 100%;
+    
 }
 
 .container {
@@ -69,6 +75,10 @@ body {font-family: "Lato", sans-serif}
 
 .container:hover .overlay {
   opacity: 1;
+}
+
+.container:active .overlay {
+    opacity: 1;
 }
 
 .text {
@@ -131,10 +141,10 @@ body {font-family: "Lato", sans-serif}
   <!-- Split header with Pictures -->
   <div class="row-header">
     <div class="column-header" style="background: rgba(0,0,0,0.863);">
-      <img src="blm.jpg" style="max-width: 100%;max-height: 100%;">
+      <img src="blm.jpg" style="max-width: 75%;max-height: 75%;">
     </div>
     <div class="column-header">
-      <img src="logo_2.jpg" style="max-width: 100%;max-height: 100%;">
+      <img src="logo_2.jpg" style="max-width: 75%;max-height: 75%;">
     </div>
   </div>
   
@@ -180,13 +190,13 @@ body {font-family: "Lato", sans-serif}
     <p class="w3-opacity w3-center"><i>Watch now!</i></p><br>
     <div class="row-pictures">
         <div class="column-pictures">
-            <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
         <div class="column-pictures">
-            <iframe src="https://www.youtube.com/embed/0dTFjQxWMvc" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>    
+            <iframe src="https://www.youtube.com/embed/0dTFjQxWMvc" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>    
         </div>
         <div class="column-pictures">
-            <iframe src="https://www.youtube.com/embed/QaPFtRzLcMk"  frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>       
+            <iframe src="https://www.youtube.com/embed/QaPFtRzLcMk"  class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>       
          </div>
     </div>
   </div>
@@ -194,7 +204,7 @@ body {font-family: "Lato", sans-serif}
 
   <!-- The Contact Section -->
   <div class="w3-black" id="contact">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px">
         <h2 class="w3-wide w3-center">CONTACT</h2>
         <p class="w3-opacity w3-center" style="font-size: 20px;"><i>Interested in sharing your story? Complete this form:</i>
             <br><a href="https://forms.gle/zS34XzrF9fLxPip36">StudentAthletes4Change Feature Form</a>
@@ -202,13 +212,13 @@ body {font-family: "Lato", sans-serif}
         <br>
         <hr>
         <br>
-        <div class="w3-row w3-padding-32">
-        <div class="w3-col m6 w3-large w3-margin-bottom">
-            <i class="fa fa-map-marker" style="width:30px"></i> Maryland, US<br>
+        <!-- <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom"> -->
+        <i class="fa fa-map-marker" style="width:30px"></i> Maryland, US<br>
             <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br> -->
-            <i class="fa fa-envelope" style="width:30px"> </i> studentathletes4change@gmail.com<br>
-        </div>
-        <div class="w3-col m6">
+        <i class="fa fa-envelope" style="width:30px"> </i> studentathletes4change@gmail.com<br>
+        <!-- </div> -->
+        <!-- <div class="w3-col m6">
             <form action="/action_page.php" target="_blank">
             <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                 <div class="w3-half">
@@ -223,8 +233,8 @@ body {font-family: "Lato", sans-serif}
             </form>
             <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
             </form>
-        </div>
-        </div>
+        </div> -->
+        <!-- </div> -->
     </div>
   </div>
   

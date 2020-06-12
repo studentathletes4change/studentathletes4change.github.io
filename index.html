@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
 <style>
 body {font-family: "Lato", sans-serif}
 * {
@@ -79,13 +82,13 @@ body {font-family: "Lato", sans-serif}
   background-color:rgba(0,0,0,0.5);
 }
 
-.container:hover .overlay {
+.container:hover .overlay{
   opacity: 1;
 }
 
-.container:active .overlay {
+.container:active .overlay{
     opacity: 1;
-}
+} 
 
 .text {
   color: white;
@@ -259,8 +262,6 @@ body {font-family: "Lato", sans-serif}
 </footer>
 
 <script>
-
-
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
   var x = document.getElementById("navDemo");
@@ -270,6 +271,14 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+$(document).ready(function() {
+    $('.hover').on('touchstart touchend', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover_effect');
+    });
+});
+
 // I think we need server side support to achieve this, so maybe I need to just take this functionality away
 // function sendMail() {
 //     var link = "mailto:gboehmer07@yahoo.com"

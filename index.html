@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
 * {
   box-sizing: border-box;
 }
@@ -18,7 +17,7 @@ body {font-family: "Lato", sans-serif}
   float: left;
   width: 50%;
   padding: 10px;
-  height: 500px;
+  height: 80vh;
   text-align: center;
 }
 
@@ -90,6 +89,7 @@ body {font-family: "Lato", sans-serif}
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: both;
+  overflow: auto;
 }
 
 
@@ -254,6 +254,15 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+// I think we need server side support to achieve this, so maybe I need to just take this functionality away
+// function sendMail() {
+//     var link = "mailto:gboehmer07@yahoo.com"
+//              + "&subject=" + escape("Website Mail")
+//              + "&body=" + escape(document.getElementById('Message').value)
+//     ;
+
+//     window.location.href = link;
+// }
 
 
 </script>

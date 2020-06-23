@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>StudentAthletes4Change</title>
+<head><link rel="icon" type="image/png" href="header-pictures/logo.jpg" sizes="32x32">
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column-header {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 50%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column-pictures {
+  float: left;
+  width: 33.33%;
+  height: 100%;
+  padding: 5px 30px;
+}
+
+/* Clear floats after image containers */
+.row-pictures::after {
+  content: "";
+  clear: both;
+  display: table;
+  flex-direction: column;
+}
+
+/* @media screen and (max-width: 500px) {
+  .column-pictures {
+    width: 100%;
+    padding: 5px 30px;
+  }
+} */
+
+.video {
+    max-width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Maybe for overlay on mobile, make it the size of the screen, something they can exit out of after reading */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.container:hover .overlay{
+  opacity: 1;
+}
+
+.container:active .overlay{
+    opacity: 1;
+} 
+
+.text {
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: both;
+  overflow: auto;
+}
+
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="./index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="./index.html#mission" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MISSION</a>
+    <a href="./index.html#athletes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ATHLETES</a>
+    <a href="./index.html#videos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEOS</a>
+    <a href="./index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="./athlete-archive.html" class="w3-bar-item w3-button">ATHLETE ARCHIVE</a>
+        <a href="#" class="w3-bar-item w3-button">VIDEO ARCHIVE</a>
+        <!-- <a href="#" class="w3-bar-item w3-button">Media</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="./index.html#mission" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MISSION</a>
+  <a href="./index.html#athletes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ATHLETES</a>
+  <a href="./index.html#videos" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEOS</a>
+  <a href="./index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="./athlete-archive.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ATHLETE ARCHIVE</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEO ARCHIVE</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
+  <!-- The Videos Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="videos">
+    <h2 class="w3-wide w3-center">VIDEOS</h2>
+    <p class="w3-opacity w3-center"><i>Watch now!</i></p><br>
+    <div class="row-pictures">
+        <div class="column-pictures">
+            <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div class="column-pictures">
+            <iframe src="https://www.youtube.com/embed/0dTFjQxWMvc" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>    
+        </div>
+        <div class="column-pictures">
+            <iframe src="https://www.youtube.com/embed/QaPFtRzLcMk"  class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>       
+         </div>
+    </div>
+  </div>
+  
+
+  <!-- The Contact Section -->
+  <div class="w3-black" id="contact">
+    <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px">
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+        <p class="w3-opacity w3-center" style="font-size: 20px;"><i>Interested in sharing your story? Complete this form:</i>
+            <br><a href="https://forms.gle/zS34XzrF9fLxPip36">StudentAthletes4Change Feature Form</a>
+        </p>
+        <br>
+        <hr>
+        <br>
+        <!-- <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom"> -->
+        <i class="fa fa-map-marker" style="width:30px"></i> Maryland, US<br>
+            <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br> -->
+        <i class="fa fa-envelope" style="width:30px"> </i> studentathletes4change@gmail.com<br>
+        <!-- </div> -->
+        <!-- <div class="w3-col m6">
+            <form action="/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                </div>
+                <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                </div>
+            </div>
+            <form>
+                <textarea id="Message" name="Message" placeholder="Message" style="width: 100%;"></textarea>
+            </form>
+            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+            </form>
+        </div> -->
+        <!-- </div> -->
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/studentathletes4change" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/studentathletes4change" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+  <a href="https://twitter.com/SA_4Change" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+  <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  <!-- <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+// I think we need server side support to achieve this, so maybe I need to just take this functionality away
+// function sendMail() {
+//     var link = "mailto:gboehmer07@yahoo.com"
+//              + "&subject=" + escape("Website Mail")
+//              + "&body=" + escape(document.getElementById('Message').value)
+//     ;
+
+//     window.location.href = link;
+// }
+
+
+</script>
+
+</body>
+</html>

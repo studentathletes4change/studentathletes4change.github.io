@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>StudentAthletes4Change</title>
+<head><link rel="icon" type="image/png" href="header-pictures/logo.jpg" sizes="32x32">
+</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -65,7 +67,24 @@ body {font-family: "Lato", sans-serif}
   width: 100%;
   height: auto;
 }
-/* Maybe for overlay on mobile, make it the size of the screen, something they can exit out of after reading */
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+#video-desktop {display: block;}
+#video-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+#video-desktop {display: none;}
+#video-mobile {display: block;}
+
+}
+
+
+/* Maybe for overlay on mobile, make it the size of the screen, something they can exit out of after reading
 .overlay {
   position: absolute;
   top: 0;
@@ -85,18 +104,18 @@ body {font-family: "Lato", sans-serif}
 
 .container:active .overlay{
     opacity: 1;
-} 
+}  */
 
-.text {
+/* .text {
   color: white;
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}
+} */
 
-.textarea {
+/* .textarea {
   width: 100%;
   height: 150px;
   padding: 12px 20px;
@@ -106,7 +125,7 @@ body {font-family: "Lato", sans-serif}
   background-color: #f8f8f8;
   resize: both;
   overflow: auto;
-}
+} */
 
 
 </style>
@@ -121,14 +140,14 @@ body {font-family: "Lato", sans-serif}
     <a href="#athletes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ATHLETES</a>
     <a href="#videos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEOS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <!-- <div class="w3-dropdown-hover w3-hide-small">
+    <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="#" class="w3-bar-item w3-button">Extras</a>
-        <a href="#" class="w3-bar-item w3-button">Media</a>
+        <a href="athlete-archive.html" class="w3-bar-item w3-button">ATHLETE ARCHIVE</a>
+        <a href="video-archive.html" class="w3-bar-item w3-button">VIDEO ARCHIVE</a>
+        <!-- <a href="#" class="w3-bar-item w3-button">Media</a> -->
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
 
@@ -138,7 +157,8 @@ body {font-family: "Lato", sans-serif}
   <a href="#athletes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ATHLETES</a>
   <a href="#videos" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEOS</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
+  <a href="./athlete-archive.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ATHLETE ARCHIVE</a>
+  <a href="./video-archive.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEO ARCHIVE</a>
 </div>
 
 <!-- Page content -->
@@ -146,11 +166,11 @@ body {font-family: "Lato", sans-serif}
 
   <!-- Split header with Pictures -->
   <div class="row-header">
-    <div class="column-header" style="background: rgba(0,0,0,0.863);">
-      <img src="blm.jpg" style="max-width: 75%;max-height: 75%;">
-    </div>
     <div class="column-header">
-      <img src="logo_2.jpg" style="max-width: 75%;max-height: 75%;">
+      <img src="header-pictures/logo.jpg" style="max-width: 75%;max-height: 75%;">
+    </div>
+    <div class="column-header" style="background: rgba(0,0,0,0.863);">
+      <img src="header-pictures/blm.jpg" style="max-width: 75%;max-height: 75%;">
     </div>
   </div>
   
@@ -158,52 +178,77 @@ body {font-family: "Lato", sans-serif}
   <!-- The Mission Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="mission">
     <h2 class="w3-wide">OUR MISSION</h2>
-    <p class="w3-opacity"><i>This is our mission</i></p>
-    <p class="w3-justify">Paragraph about our mission</p>
+    <p class="w3-opacity"><i>Do we want to put something here? Our motto?</i></p>
+    <p class="w3-justify">This organization was formed in response to the murders of George Floyd, 
+      Breonna Taylor, Ahmaud Arbery, and countless others. Racism, sexism, and other forms of discrimination 
+      are extremely prevalent in collegiate athletics and are constantly swept under the rug in favor of the 
+      oppressor. Student-Athletes 4 Change was formed to create a safe platform for student-athletes to share 
+      their personal experiences with these issues in athletics. Our organization wants to help implement 
+      widespread change within teams, departments, and the NCAA holistically.</p>
   </div>
 
   <!-- The Athletes Section -->
   <div class="w3-black" id="athletes">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">ATHLETES</h2>
+      <h2 class="w3-wide w3-center"><a href="./athlete-archive.html" style="text-decoration:none">ATHLETES</a></h2>
       <p class="w3-opacity w3-center"><i>Hear their stories</i></p><br>
     
-    <div class="row-pictures">
-        <div class="column-pictures">
-            <div class="container">
-                <img src="student-athlete-picture.PNG" alt="Wren Aye" style="width:100%" class="image">
-                <div class="overlay">
-                  <div class="text">
-                      <p style="font-size: 20px;">Wren Aye</p>
-                      <p style="font-size: 10px;"> Here is her story. My story My story. My story. story story sottyr story story sotry toyr story story story story story story story story story jdlsaj;fk stlry jkldfs sfdj nkd jkdf sltor </p>
-                    </div>
-                </div>
+      <div id = "content-desktop">
+        <div class="row-pictures">
+            <div class="column-pictures">
+              <a href="./bio-video.html?athlete=wren" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">
+                <img src="student-athlete-pictures/wren.png" alt="Wren Aye" style="width:100%; box-shadow:0 8px 16px 0 rgb(32, 32, 32), 0 6px 20px 0 rgb(48, 48, 48)" class="responsive">
+              </a>
+                <!-- <div class="container"> -->
+                    <!-- <img src="student-athlete-pictures/wren.png" alt="Wren Aye" style="width:100%" class="image"> -->
+                    <!-- <div class="overlay">
+                      <div class="text">
+                          <p style="font-size: 20px;">Wren Aye</p>
+                          <p style="font-size: 10px;"> Here is her story. My story My story. My story. story story sottyr story story sotry toyr story story story story story story story story story jdlsaj;fk stlry jkldfs sfdj nkd jkdf sltor </p>
+                        </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
+            <div class="column-pictures">
+              <a href="./bio-video.html?athlete=yewande" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">
+                <img src="student-athlete-pictures/yewande.png" alt="Yewande Balogun" style="width:100%; box-shadow:0 8px 16px 0 rgb(32, 32, 32), 0 6px 20px 0 rgb(48, 48, 48)" class="responsive">
+              </a>
+            </div>
+            <div class="column-pictures">
+              <a href="./bio-video.html?athlete=yewande" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">
+                <img src="student-athlete-pictures/yewande.png" alt="Yewande Balogun" style="width:100%; box-shadow:0 8px 16px 0 rgb(32, 32, 32), 0 6px 20px 0 rgb(48, 48, 48)" class="responsive">
+              </a>
+            </div>   
         </div>
-        <div class="column-pictures">
-          <img src="student-athlete-picture.PNG" alt="Forest" style="width:100%" class="responsive">
-        </div>
-        <div class="column-pictures">
-          <img src="student-athlete-picture.PNG" alt="Mountains" style="width:100%" class="responsive">
-        </div>
-    </div>
+      </div>
+
+      <div id="content-mobile">
+        <a href="./bio-video.html?athlete=wren" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">
+          <img src="student-athlete-pictures/wren.png" alt="Wren Aye" style="width:100%; box-shadow:0 8px 16px 0 rgb(32, 32, 32), 0 6px 20px 0 rgb(48, 48, 48)" class="responsive">
+        </a>
+      </div>
     </div>
   </div>
 
   <!-- The Videos Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="videos">
-    <h2 class="w3-wide w3-center">VIDEOS</h2>
+    <h2 class="w3-wide w3-center"><a href="./video-archive.html" style="text-decoration:none">VIDEOS</a></h2>
     <p class="w3-opacity w3-center"><i>Watch now!</i></p><br>
-    <div class="row-pictures">
-        <div class="column-pictures">
-            <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        </div>
-        <div class="column-pictures">
-            <iframe src="https://www.youtube.com/embed/0dTFjQxWMvc" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>    
-        </div>
-        <div class="column-pictures">
-            <iframe src="https://www.youtube.com/embed/QaPFtRzLcMk"  class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>       
-         </div>
+    <div id=video-desktop>
+      <div class="row-pictures">
+          <div class="column-pictures">
+              <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          <div class="column-pictures">
+              <iframe src="https://www.youtube.com/embed/0dTFjQxWMvc" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>    
+          </div>
+          <div class="column-pictures">
+              <iframe src="https://www.youtube.com/embed/QaPFtRzLcMk"  class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>       
+          </div>
+      </div>
+    </div>
+    <div id="video-mobile">
+      <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
   </div>
   

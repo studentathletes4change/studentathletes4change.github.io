@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>StudentAthletes4Change</title>
+<head><link rel="icon" type="image/png" href="header-pictures/logo.jpg" sizes="32x32">
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 50%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column-pictures {
+  float: left;
+  width: 33.33%;
+  height: 100%;
+  padding: 5px 30px;
+}
+
+/* Clear floats after image containers */
+.row-pictures::after {
+  content: "";
+  clear: both;
+  display: table;
+  flex-direction: column;
+}
+
+.video {
+    max-width: 100%;
+}
+
+
+</style>
+
+<body onload="srcFunction()">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="./index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="./index.html#mission" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MISSION</a>
+    <a href="./index.html#athletes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ATHLETES</a>
+    <a href="./index.html#videos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEOS</a>
+    <a href="./index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="./athlete-archive.html" class="w3-bar-item w3-button">ATHLETE ARCHIVE</a>
+        <a href="#" class="w3-bar-item w3-button">VIDEO ARCHIVE</a>
+        <!-- <a href="#" class="w3-bar-item w3-button">Media</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="./index.html#mission" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MISSION</a>
+  <a href="./index.html#athletes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ATHLETES</a>
+  <a href="./index.html#videos" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEOS</a>
+  <a href="./index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="./athlete-archive.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ATHLETE ARCHIVE</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VIDEO ARCHIVE</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- Split header with Picture and Bio -->
+    <div class="row">
+      <div class="column">
+        <img src="" id="athlete_file" style="max-width: 75%;max-height: 75%;">
+      </div>
+      <div class="column-header">
+        <p class="w3-opacity w3-center w3-padding-64"><i>This is the Athlete Bio</i></p>
+      </div>
+    </div>
+
+  <!-- The Videos Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" id="videos">
+      <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+  
+
+  <!-- The Contact Section -->
+  <div class="w3-black" id="contact">
+    <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px">
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+        <p class="w3-opacity w3-center" style="font-size: 20px;"><i>Interested in sharing your story? Complete this form:</i>
+            <br><a href="https://forms.gle/zS34XzrF9fLxPip36">StudentAthletes4Change Feature Form</a>
+        </p>
+        <br>
+        <hr>
+        <br>
+        <!-- <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom"> -->
+        <i class="fa fa-map-marker" style="width:30px"></i> Maryland, US<br>
+            <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br> -->
+        <i class="fa fa-envelope" style="width:30px"> </i> studentathletes4change@gmail.com<br>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/studentathletes4change" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/studentathletes4change" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
+  <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+  <a href="https://twitter.com/SA_4Change" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+  <!-- <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  <!-- <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function srcFunction(){
+  url = window.location.href
+  athlete = getParameterByName("athlete", url)
+  document.getElementById('athlete_file').src = "./student-athlete-pictures/" + athlete + ".png";
+
+
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+
+</script>
+
+</body>
+</html>

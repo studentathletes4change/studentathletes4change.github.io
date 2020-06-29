@@ -50,6 +50,18 @@ body {font-family: "Lato", sans-serif}
     max-width: 100%;
 }
 
+.bio {
+  padding-top: 64px;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+    padding: 5px 30px;
+    text-align: center;
+  }
+}
+
 
 </style>
 
@@ -95,14 +107,15 @@ body {font-family: "Lato", sans-serif}
       <div class="column">
         <img src="" id="athlete_file" style="max-width: 75%;max-height: 75%;">
       </div>
-      <div class="column-header">
-        <p class="w3-opacity w3-center w3-padding-64"><i>This is the Athlete Bio</i></p>
+      <div class="column">
+        <p class="w3-opacity w3-center bio"><iframe id="athlete_bio" frameborder="0" height="400"
+          width="95%"></iframe></p>
       </div>
     </div>
 
   <!-- The Videos Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" id="videos">
-      <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+      <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" width="600" height="300"></iframe>
   </div>
   
 
@@ -150,10 +163,10 @@ function myFunction() {
 }
 
 function srcFunction(){
-  url = window.location.href
-  athlete = getParameterByName("athlete", url)
+  url = window.location.href;
+  athlete = getParameterByName("athlete", url);
   document.getElementById('athlete_file').src = "./student-athlete-pictures/" + athlete + ".png";
-
+  document.getElementById('athlete_bio').src = "./student-athlete-bios/" + athlete + ".html";
 
 }
 
@@ -166,6 +179,9 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+
+
 
 
 </script>

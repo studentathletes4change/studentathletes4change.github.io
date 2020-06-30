@@ -10,6 +10,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
 </style>
 
 <!-- Navbar -->
@@ -56,6 +66,18 @@ and is wrapped around the whole page content, except for the footer in this exam
   <p style="font-size:2vw;">Empowering Student-Athletes to Enforce Change</p>
 </header>
 
+<!-- Introduction menu -->
+<div id="content-mobile">
+  <div class="w3-col l4">
+    <!-- About Card -->
+    <div class="w3-card w3-margin w3-margin-top">
+    <img src="./blog-pictures/wren_blog.png" style="width:100%">
+      <div class="w3-container w3-white">
+        <h4><b>Wren Aye</b></h4>
+        <p>Founder of StudentAthletes4Change and Former Student Athlete. StudentAthletes4Change blog is giving student athletes creative freedom to write about topics they’re passionate about. </p>
+      </div>
+    </div><hr></div></div>
+
 <!-- Grid -->
 <div class="w3-row">
 
@@ -89,6 +111,8 @@ and is wrapped around the whole page content, except for the footer in this exam
             <br>Why Are All the Black Kids Sitting Together in the Cafeteria? by Beverly Daniel Tatum
             <br><br>Lastly, many of the people who have turned to quotes by MLK Jr. to argue against violent protests are forgetting what he said regarding riots: "A riot is the language of the unheard." Before you criticize how people are protesting, ask yourself why the destruction of a country that Black people suffered to build is so much more upsetting to you than the murder of an innocent Black man. Property is never worth more than human life.
             <br><br>If you are still unconvinced that Black lives are worth fighting for, I am both saddened and horrified. Black people should not have to justify their humanity to society.
+            <br><br><b>Katie's Bio:</b>
+            <br>I am from Crofton, MD and went to University of Maryland, Baltimore County for my undergraduate degree. I was a Meyerhoff Scholar and played on the women's soccer team there while studying mechanical engineering. I graduated in May 2019 and started graduate school in fall 2019 at NC State University. I'm currently pursuing my PhD in mechanical engineering with a concentration in composite materials and damage characterization. 
           </p>
     </div>
       <div class="w3-row">
@@ -129,15 +153,16 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
 
 <!-- Introduction menu -->
-<div class="w3-col l4">
-  <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-  <img src="./blog-pictures/wren_blog.png" style="width:100%">
-    <div class="w3-container w3-white">
-      <h4><b>Wren Aye</b></h4>
-      <p>Founder of StudentAthletes4Change and Former Student Athlete. Maybe a blurb from Wren about the blog.</p>
-    </div>
-  </div><hr>
+<div id="content-desktop">
+  <div class="w3-col l4">
+    <!-- About Card -->
+    <div class="w3-card w3-margin w3-margin-top">
+    <img src="./blog-pictures/wren_blog.png" style="width:100%">
+      <div class="w3-container w3-white">
+        <h4><b>Wren Aye</b></h4>
+        <p>Founder of StudentAthletes4Change and Former Student Athlete. StudentAthletes4Change blog is giving student athletes creative freedom to write about topics they’re passionate about.</p>
+      </div>
+    </div><hr></div>
   
   <!-- Posts
   <div class="w3-card w3-margin">

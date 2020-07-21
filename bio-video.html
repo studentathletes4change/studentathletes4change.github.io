@@ -109,7 +109,7 @@ body {font-family: "Lato", sans-serif}
 
   <!-- The Videos Section -->
   <div class="w3-container w3-content w3-center" id="videos">
-      <iframe src="https://www.youtube.com/embed/D5zgnH6OirE" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" width="600" height="300"></iframe>
+      <iframe id="athlete_video" class= "video" frameborder= "0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" width="600" height="300"></iframe>
   </div>
   
 
@@ -146,6 +146,12 @@ body {font-family: "Lato", sans-serif}
 </footer>
 
 <script>
+
+const videoDict = {'angie': 'https://www.youtube.com/embed/juNzWmAgDBQ',
+                   'wren': 'https://www.youtube.com/embed/0dTFjQxWMvc',
+                   'mark': 'https://www.youtube.com/embed/0dTFjQxWMvc',
+                   'yewande': 'https://www.youtube.com/embed/0dTFjQxWMvc'}
+
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
   var x = document.getElementById("navDemo");
@@ -161,6 +167,7 @@ function srcFunction(){
   athlete = getParameterByName("athlete", url);
   document.getElementById('athlete_file').src = "./student-athlete-pictures/" + athlete + ".png";
   document.getElementById('athlete_bio').src = "./student-athlete-bios/" + athlete + ".html";
+  document.getElementById('athlete_video').src = videoDict[athlete];
 
 }
 
